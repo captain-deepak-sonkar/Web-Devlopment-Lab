@@ -1,0 +1,85 @@
+/* Basic page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Header */
+header {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+main h2 {
+    margin-bottom: 20px;
+}
+
+/* CSS Grid for projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Individual project cards */
+.project-card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    color: #2563eb;
+    margin-top: 0;
+}
+
+/* Make the first project card bigger */
+.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: #eaf1ff;
+    border: 1px solid #93c5fd;
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tablet screens */
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured {
+        grid-column: span 1;
+    }
+}
