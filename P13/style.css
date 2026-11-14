@@ -1,0 +1,83 @@
+/* Basic page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Header */
+header {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Navigation using Flexbox */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+    background-color: #1e293b;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+/* Project cards using CSS Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #2563eb;
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
